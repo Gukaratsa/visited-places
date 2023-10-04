@@ -1,0 +1,31 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Data\Places\c67dd607-d4c6-4615-bae4-50d1d43cc3dc.json" />
+    <None Remove="Data\Places\feb286a1-6954-4a8e-a64d-9567972ca6eb.json" />
+    <None Remove="Data\Users\85dde8b0-2374-403c-af3b-ebc63c2af429.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Data\Places\c67dd607-d4c6-4615-bae4-50d1d43cc3dc.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\Places\feb286a1-6954-4a8e-a64d-9567972ca6eb.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\Users\85dde8b0-2374-403c-af3b-ebc63c2af429.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\VisitedPlaces.Store.Shared\VisitedPlaces.Store.Shared.csproj" />
+  </ItemGroup>
+
+</Project>
