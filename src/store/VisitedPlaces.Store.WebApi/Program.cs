@@ -1,4 +1,6 @@
 using VisitedPlaces.Shared;
+using VisitedPlaces.Store.JsonFileDatabase;
+using VisitedPlaces.Store.Shared.Interfaces;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -10,6 +12,9 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 builder.Services.AddMediatR_FromExeFolder();
+
+builder.Services.AddSingleton<IDatabaseService, JsonFileDatabaseService>();
+//builder.Services.AddSingleton<IDatabaseService, SQLiteDatabaseService>();
 
 var app = builder.Build();
 

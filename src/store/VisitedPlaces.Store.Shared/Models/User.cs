@@ -1,3 +1,3 @@
 ﻿namespace VisitedPlaces.Store.Shared.Models;
 
-public record User(Guid id, string name);
+public record User(Guid Id, string Name);

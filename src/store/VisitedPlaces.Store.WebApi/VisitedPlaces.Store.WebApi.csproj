@@ -14,6 +14,7 @@
   <ItemGroup>
     <ProjectReference Include="..\VisitedPlaces.Store.JsonFileDatabase\VisitedPlaces.Store.JsonFileDatabase.csproj" />
     <ProjectReference Include="..\VisitedPlaces.Store.Shared\VisitedPlaces.Store.Shared.csproj" />
+    <ProjectReference Include="..\VisitedPlaces.Store.SQLiteDatabase\VisitedPlaces.Store.SQLiteDatabase.csproj" />
   </ItemGroup>
 
 </Project>
