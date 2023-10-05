@@ -31,6 +31,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "store", "store", "{43390451
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VisitedPlaces.Store.JsonFileDatabase.UnitTest", "tests\store\VisitedPlaces.Store.JsonFileDatabase.UnitTest\VisitedPlaces.Store.JsonFileDatabase.UnitTest.csproj", "{24B31226-12A9-4234-937B-5EBE70B2C2C6}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VisitedPlaces.Store.Handlers", "src\store\VisitedPlaces.Store.Handlers\VisitedPlaces.Store.Handlers.csproj", "{7C888486-6EF4-439E-BE26-4669CB4CC859}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -73,6 +75,10 @@ Global
 		{24B31226-12A9-4234-937B-5EBE70B2C2C6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{24B31226-12A9-4234-937B-5EBE70B2C2C6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{24B31226-12A9-4234-937B-5EBE70B2C2C6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7C888486-6EF4-439E-BE26-4669CB4CC859}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7C888486-6EF4-439E-BE26-4669CB4CC859}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7C888486-6EF4-439E-BE26-4669CB4CC859}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7C888486-6EF4-439E-BE26-4669CB4CC859}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -90,6 +96,7 @@ Global
 		{56AD14D7-37C0-4E5C-8C20-3CAE018CD8F9} = {8B960D62-BFCE-47E4-8C81-A631DF87B4CE}
 		{43390451-AF84-4A53-AF34-6028F2B69656} = {072E4F42-C48F-4F24-B609-A0CFC8CA64AA}
 		{24B31226-12A9-4234-937B-5EBE70B2C2C6} = {43390451-AF84-4A53-AF34-6028F2B69656}
+		{7C888486-6EF4-439E-BE26-4669CB4CC859} = {8B960D62-BFCE-47E4-8C81-A631DF87B4CE}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {67AED660-FB39-4ABB-A4D6-F16A67483303}

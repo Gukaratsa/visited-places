@@ -2,7 +2,7 @@
 using VisitedPlaces.Store.Shared;
 using MediatR;
 
-namespace VisitedPlaces.Store.SQLiteDatabase.Handlers;
+namespace VisitedPlaces.Store.Handlers;
 
 public class AddNewVisitedPlaceHandler : IRequestHandler<AddNewVisitedPlace>
 {

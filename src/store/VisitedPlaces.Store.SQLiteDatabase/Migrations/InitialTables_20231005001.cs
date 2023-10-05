@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 namespace VisitedPlaces.Store.SQLiteDatabase.Migrations
 {
     [Migration(20231005001)]
-    public class InitialTables_20231005001
+    public class InitialTables_20231005001 : Migration
     {
         public override void Down()
         {

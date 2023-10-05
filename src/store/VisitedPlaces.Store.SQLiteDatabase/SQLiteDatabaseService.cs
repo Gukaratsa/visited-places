@@ -70,5 +70,15 @@ public class SQLiteDatabaseService : IDatabaseService
        
         return result;
     }
+
+    public Task<IEnumerable<Place>> GetVisitedPlaces(Guid userId, CancellationToken cancellationToken = default)
+    {
+        throw new NotImplementedException();
+    }
+
+    public Task<IEnumerable<User>> GetVisitors(Guid placeId, CancellationToken cancellationToken = default)
+    {
+        throw new NotImplementedException();
+    }
 }
    

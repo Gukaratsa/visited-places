@@ -3,7 +3,7 @@ using VisitedPlaces.Store.Shared;
 using MediatR;
 using VisitedPlaces.Store.Shared.Interfaces;
 
-namespace VisitedPlaces.Store.SQLiteDatabase.Handlers;
+namespace VisitedPlaces.Store.Handlers;
 
 public class GetVisitedPlacesRequestHandler : IRequestHandler<GetVisitedPlacesRequest, IEnumerable<Place>>
 {
@@ -15,6 +15,6 @@ public class GetVisitedPlacesRequestHandler : IRequestHandler<GetVisitedPlacesRe
     }
     public Task<IEnumerable<Place>> Handle(GetVisitedPlacesRequest request, CancellationToken cancellationToken)
     {
-        return _databaseService.GetPlaces(cancellationToken);
+        return _databaseService.GetVisitedPlaces(request.userId, cancellationToken);
     }
 }
