@@ -1,6 +1,7 @@
 using VisitedPlaces.Shared;
 using VisitedPlaces.Store.JsonFileDatabase;
 using VisitedPlaces.Store.Shared.Interfaces;
+using VisitedPlaces.Store.SQLiteDatabase.Context;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -15,6 +16,8 @@ builder.Services.AddMediatR_FromExeFolder();
 
 builder.Services.AddSingleton<IDatabaseService, JsonFileDatabaseService>();
 //builder.Services.AddSingleton<IDatabaseService, SQLiteDatabaseService>();
+
+builder.Services.AddSingleton<DapperContext>();
 
 var app = builder.Build();
 

@@ -7,6 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Data\Links\UserPlacesLink.json" />
     <None Remove="Data\Places\c67dd607-d4c6-4615-bae4-50d1d43cc3dc.json" />
     <None Remove="Data\Places\feb286a1-6954-4a8e-a64d-9567972ca6eb.json" />
     <None Remove="Data\Users\0be1412b-7cc3-4120-9931-88cabbbf4f74.json" />
@@ -15,6 +16,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Content Include="Data\Links\UserPlacesLink.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Data\Places\c67dd607-d4c6-4615-bae4-50d1d43cc3dc.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
