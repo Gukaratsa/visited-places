@@ -1,0 +1,83 @@
+﻿@page "/places"
+@using VisitedPlaces.Store.Shared.Models
+@inject HttpClient Http
+
+<PageTitle>Places</PageTitle>
+
+<h1>Places</h1>
+
+@if (places == null)
+{
+    <p><em>Loading...</em></p>
+}
+else
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var place in places)
+            {
+                <tr @onclick="@(e => OnClick(@place))">
+                    <td>@place.Id</td>
+                    <td>@place.Name</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+
+@if (selectedPlace == null)
+{
+    
+}
+else
+{
+    <p>@selectedPlace.Name</p>
+
+    @if (visitors == null)
+    {
+        <p><em>Loading...</em></p>
+    }
+    else
+    {
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var visitor in visitors)
+                {
+                    <tr>
+                        <td>@visitor.Id</td>
+                        <td>@visitor.Name</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    }
+}
+
+@code {
+    private IEnumerable<Place>? places;
+    private Place? selectedPlace;
+    private IEnumerable<User>? visitors;
+
+    protected override async Task OnInitializedAsync()
+    {
+        places = await Http.GetFromJsonAsync<IEnumerable<Place>>("Place/GetPlaces");
+    }
+
+    private async Task OnClick(Place SelectedPlace)
+    {
+        selectedPlace = SelectedPlace;
+        visitors = await Http.GetFromJsonAsync<IEnumerable<User>>($"Place/GetVisitors?placeId={selectedPlace.Id}");
+    }
+}

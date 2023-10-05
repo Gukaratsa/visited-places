@@ -1,4 +1,8 @@
 using Microsoft.AspNetCore.ResponseCompression;
+using System.Reflection;
+using VisitedPlaces.Shared;
+using VisitedPlaces.Store.JsonFileDatabase;
+using VisitedPlaces.Store.Shared.Interfaces;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -6,6 +10,10 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllersWithViews();
 builder.Services.AddRazorPages();
+
+//builder.Services.AddMediatR((config) => config.RegisterServicesFromAssembly(Assembly.GetExecutingAssembly()));
+builder.Services.AddMediatR_FromExeFolder();
+builder.Services.AddSingleton<IDatabaseService, JsonFileDatabaseService>();
 
 var app = builder.Build();
 

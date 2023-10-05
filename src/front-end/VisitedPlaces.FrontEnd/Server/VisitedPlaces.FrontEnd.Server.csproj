@@ -11,6 +11,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\..\store\VisitedPlaces.Store.Handlers\VisitedPlaces.Store.Handlers.csproj" />
+    <ProjectReference Include="..\..\..\store\VisitedPlaces.Store.JsonFileDatabase\VisitedPlaces.Store.JsonFileDatabase.csproj" />
+    <ProjectReference Include="..\..\..\store\VisitedPlaces.Store.Shared\VisitedPlaces.Store.Shared.csproj" />
     <ProjectReference Include="..\Client\VisitedPlaces.FrontEnd.Client.csproj" />
     <ProjectReference Include="..\Shared\VisitedPlaces.FrontEnd.Shared.csproj" />
   </ItemGroup>

@@ -12,7 +12,7 @@ public static class MediatRExtensions
         var assembly = Assembly.GetExecutingAssembly();
         var exePath = Path.GetDirectoryName(assembly.Location) 
             ?? throw new NullReferenceException($"Could not find directory for assembly:{assembly.FullName}");
-        var dllFiles = Directory.GetFiles(exePath, "*.dll");
+        var dllFiles = Directory.GetFiles(exePath, "VisitedPlaces*.dll");
         var dllAssemblies = dllFiles.Select(x => Assembly.LoadFrom(x));
         var assemblies = new Assembly[] { assembly }.Concat(dllAssemblies).ToArray();
         serviceDescriptors.AddMediatR((config) => config
